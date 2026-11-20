@@ -15,3 +15,10 @@ MAKEFUN_ENV_URL=http://127.0.0.1:8080 python3 main.py
 
 The readable source is `chess_source.py`; `main.py` is that source packed by
 `makefun compress`.
+
+## How it searches
+
+Alpha-beta with iterative deepening, a transposition table, null-move pruning,
+late-move reductions, killer and history ordering, and a quiescence search over
+captures and promotions. Every move comes from a fixed node budget, never a
+clock, so a trial replays move for move.
